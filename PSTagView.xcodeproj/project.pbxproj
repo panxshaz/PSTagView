@@ -7,21 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		574D0EAC1DA8C27A0049CB28 /* PSTagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 574D0EAB1DA8C27A0049CB28 /* PSTagView.xib */; };
+		574D0EAE1DA8F04D0049CB28 /* PSTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 574D0EAD1DA8F04D0049CB28 /* PSTagCell.xib */; };
+		574D0EB01DA9059B0049CB28 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D0EAF1DA9059B0049CB28 /* UITableViewExtension.swift */; };
 		579407481DA7D81800D238A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579407471DA7D81800D238A9 /* AppDelegate.swift */; };
 		5794074A1DA7D81800D238A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579407491DA7D81800D238A9 /* ViewController.swift */; };
 		5794074D1DA7D81800D238A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5794074B1DA7D81800D238A9 /* Main.storyboard */; };
 		5794074F1DA7D81800D238A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5794074E1DA7D81800D238A9 /* Assets.xcassets */; };
-		579407521DA7D81800D238A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579407501DA7D81800D238A9 /* LaunchScreen.storyboard */; };
+		5794075A1DA7DD6F00D238A9 /* PSTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579407591DA7DD6F00D238A9 /* PSTagView.swift */; };
+		5794075C1DA7DDC800D238A9 /* PSTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5794075B1DA7DDC800D238A9 /* PSTagCell.swift */; };
+		5794075E1DA7E42600D238A9 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5794075D1DA7E42600D238A9 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		574D0EAB1DA8C27A0049CB28 /* PSTagView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSTagView.xib; sourceTree = "<group>"; };
+		574D0EAD1DA8F04D0049CB28 /* PSTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSTagCell.xib; sourceTree = "<group>"; };
+		574D0EAF1DA9059B0049CB28 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		579407441DA7D81800D238A9 /* PSTagView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSTagView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		579407471DA7D81800D238A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		579407491DA7D81800D238A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5794074C1DA7D81800D238A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5794074E1DA7D81800D238A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		579407511DA7D81800D238A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		579407531DA7D81800D238A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		579407591DA7DD6F00D238A9 /* PSTagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSTagView.swift; sourceTree = "<group>"; };
+		5794075B1DA7DDC800D238A9 /* PSTagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSTagCell.swift; sourceTree = "<group>"; };
+		5794075D1DA7E42600D238A9 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +66,15 @@
 			children = (
 				579407471DA7D81800D238A9 /* AppDelegate.swift */,
 				579407491DA7D81800D238A9 /* ViewController.swift */,
+				574D0EAF1DA9059B0049CB28 /* UITableViewExtension.swift */,
+				574D0EAB1DA8C27A0049CB28 /* PSTagView.xib */,
+				574D0EAD1DA8F04D0049CB28 /* PSTagCell.xib */,
 				5794074B1DA7D81800D238A9 /* Main.storyboard */,
 				5794074E1DA7D81800D238A9 /* Assets.xcassets */,
-				579407501DA7D81800D238A9 /* LaunchScreen.storyboard */,
 				579407531DA7D81800D238A9 /* Info.plist */,
+				5794075D1DA7E42600D238A9 /* Launch Screen.storyboard */,
+				579407591DA7DD6F00D238A9 /* PSTagView.swift */,
+				5794075B1DA7DDC800D238A9 /* PSTagCell.swift */,
 			);
 			path = PSTagView;
 			sourceTree = "<group>";
@@ -122,7 +137,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				579407521DA7D81800D238A9 /* LaunchScreen.storyboard in Resources */,
+				574D0EAC1DA8C27A0049CB28 /* PSTagView.xib in Resources */,
+				5794075E1DA7E42600D238A9 /* Launch Screen.storyboard in Resources */,
+				574D0EAE1DA8F04D0049CB28 /* PSTagCell.xib in Resources */,
 				5794074F1DA7D81800D238A9 /* Assets.xcassets in Resources */,
 				5794074D1DA7D81800D238A9 /* Main.storyboard in Resources */,
 			);
@@ -136,7 +153,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5794074A1DA7D81800D238A9 /* ViewController.swift in Sources */,
+				574D0EB01DA9059B0049CB28 /* UITableViewExtension.swift in Sources */,
+				5794075C1DA7DDC800D238A9 /* PSTagCell.swift in Sources */,
 				579407481DA7D81800D238A9 /* AppDelegate.swift in Sources */,
+				5794075A1DA7DD6F00D238A9 /* PSTagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,14 +169,6 @@
 				5794074C1DA7D81800D238A9 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		579407501DA7D81800D238A9 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				579407511DA7D81800D238A9 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -252,6 +264,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PSTagView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = in.mjstudios.PSTagView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -263,6 +276,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PSTagView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = in.mjstudios.PSTagView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -288,6 +302,7 @@
 				579407581DA7D81800D238A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
