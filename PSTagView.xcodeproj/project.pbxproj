@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		574D0EAC1DA8C27A0049CB28 /* PSTagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 574D0EAB1DA8C27A0049CB28 /* PSTagView.xib */; };
-		574D0EAE1DA8F04D0049CB28 /* PSTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 574D0EAD1DA8F04D0049CB28 /* PSTagCell.xib */; };
+		574D0EAE1DA8F04D0049CB28 /* PSTagTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 574D0EAD1DA8F04D0049CB28 /* PSTagTableCell.xib */; };
 		574D0EB01DA9059B0049CB28 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D0EAF1DA9059B0049CB28 /* UITableViewExtension.swift */; };
 		579407481DA7D81800D238A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579407471DA7D81800D238A9 /* AppDelegate.swift */; };
 		5794074A1DA7D81800D238A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579407491DA7D81800D238A9 /* ViewController.swift */; };
@@ -20,8 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		574D0EAB1DA8C27A0049CB28 /* PSTagView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSTagView.xib; sourceTree = "<group>"; };
-		574D0EAD1DA8F04D0049CB28 /* PSTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSTagCell.xib; sourceTree = "<group>"; };
+		574D0EAD1DA8F04D0049CB28 /* PSTagTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSTagTableCell.xib; sourceTree = "<group>"; };
 		574D0EAF1DA9059B0049CB28 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		579407441DA7D81800D238A9 /* PSTagView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSTagView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		579407471DA7D81800D238A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,8 +65,7 @@
 				579407471DA7D81800D238A9 /* AppDelegate.swift */,
 				579407491DA7D81800D238A9 /* ViewController.swift */,
 				574D0EAF1DA9059B0049CB28 /* UITableViewExtension.swift */,
-				574D0EAB1DA8C27A0049CB28 /* PSTagView.xib */,
-				574D0EAD1DA8F04D0049CB28 /* PSTagCell.xib */,
+				574D0EAD1DA8F04D0049CB28 /* PSTagTableCell.xib */,
 				5794074B1DA7D81800D238A9 /* Main.storyboard */,
 				5794074E1DA7D81800D238A9 /* Assets.xcassets */,
 				579407531DA7D81800D238A9 /* Info.plist */,
@@ -137,9 +134,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				574D0EAC1DA8C27A0049CB28 /* PSTagView.xib in Resources */,
 				5794075E1DA7E42600D238A9 /* Launch Screen.storyboard in Resources */,
-				574D0EAE1DA8F04D0049CB28 /* PSTagCell.xib in Resources */,
+				574D0EAE1DA8F04D0049CB28 /* PSTagTableCell.xib in Resources */,
 				5794074F1DA7D81800D238A9 /* Assets.xcassets in Resources */,
 				5794074D1DA7D81800D238A9 /* Main.storyboard in Resources */,
 			);
