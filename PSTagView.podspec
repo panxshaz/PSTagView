@@ -7,7 +7,7 @@ Pod::Spec.new do |spec|
   spec.authors = { "Pankaj Sharma" => 'pankaj@marijuanaincstudios.com' }
   spec.social_media_url = "https://www.facebook.com/appigizer"
 
-  spec.platform = :ios, "9.0"
+  spec.platform = :ios, "8.0"
   spec.requires_arc = true
   spec.source = { git: "https://github.com/panxshazm/PSTagView.git", tag: "v#{spec.version}", submodules: true }
   spec.source_files = 'PSTagView/PSTagTableCell.swift', 'PSTagView/PSTagTableCell.xib'
