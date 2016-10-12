@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = "PSTagView"
-  spec.version = "1.0.0"
+  spec.version = "0.1"
   spec.summary = "Simple, easy to use control for using tags in Swift UITableViewCell"
   spec.homepage = "https://github.com/panxshazm/PSTagView"
   spec.license = { type: 'MIT', file: 'LICENSE' }
