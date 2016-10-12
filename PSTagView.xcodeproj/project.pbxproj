@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		574D0EAE1DA8F04D0049CB28 /* PSTagTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 574D0EAD1DA8F04D0049CB28 /* PSTagTableCell.xib */; };
 		575C86251DAE6F4000AD8DB1 /* PSTagViewFrameowrk.h in Headers */ = {isa = PBXBuildFile; fileRef = 575C86241DAE6F4000AD8DB1 /* PSTagViewFrameowrk.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		575C86291DAE6F4000AD8DB1 /* PSTagView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575C86221DAE6F4000AD8DB1 /* PSTagView.framework */; };
 		575C862A1DAE6F4000AD8DB1 /* PSTagView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 575C86221DAE6F4000AD8DB1 /* PSTagView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		575C86301DAE701A00AD8DB1 /* PSTagTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575C862F1DAE701A00AD8DB1 /* PSTagTableCell.swift */; };
-		575C86311DAE701A00AD8DB1 /* PSTagTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575C862F1DAE701A00AD8DB1 /* PSTagTableCell.swift */; };
-		575C86321DAE70F100AD8DB1 /* PSTagTableCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = 574D0EAD1DA8F04D0049CB28 /* PSTagTableCell.xib */; };
+		575C86961DAE82CA00AD8DB1 /* PSTagTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575C86941DAE82CA00AD8DB1 /* PSTagTableCell.swift */; };
+		575C86971DAE82CA00AD8DB1 /* PSTagTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575C86941DAE82CA00AD8DB1 /* PSTagTableCell.swift */; };
+		575C86981DAE82CA00AD8DB1 /* PSTagTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575C86951DAE82CA00AD8DB1 /* PSTagTableCell.xib */; };
+		575C86991DAE82CA00AD8DB1 /* PSTagTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575C86951DAE82CA00AD8DB1 /* PSTagTableCell.xib */; };
 		579407481DA7D81800D238A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579407471DA7D81800D238A9 /* AppDelegate.swift */; };
 		5794074A1DA7D81800D238A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579407491DA7D81800D238A9 /* ViewController.swift */; };
 		5794074D1DA7D81800D238A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5794074B1DA7D81800D238A9 /* Main.storyboard */; };
@@ -46,11 +46,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		574D0EAD1DA8F04D0049CB28 /* PSTagTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSTagTableCell.xib; sourceTree = "<group>"; };
 		575C86221DAE6F4000AD8DB1 /* PSTagView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PSTagView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		575C86241DAE6F4000AD8DB1 /* PSTagViewFrameowrk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSTagViewFrameowrk.h; sourceTree = "<group>"; };
 		575C86261DAE6F4000AD8DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		575C862F1DAE701A00AD8DB1 /* PSTagTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSTagTableCell.swift; sourceTree = "<group>"; };
+		575C86941DAE82CA00AD8DB1 /* PSTagTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSTagTableCell.swift; sourceTree = "<group>"; };
+		575C86951DAE82CA00AD8DB1 /* PSTagTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSTagTableCell.xib; sourceTree = "<group>"; };
 		579407441DA7D81800D238A9 /* PSTagViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSTagViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		579407471DA7D81800D238A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		579407491DA7D81800D238A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +88,15 @@
 			path = PSTagViewFrameowrk;
 			sourceTree = "<group>";
 		};
+		575C86931DAE82CA00AD8DB1 /* PSTagViewSource */ = {
+			isa = PBXGroup;
+			children = (
+				575C86941DAE82CA00AD8DB1 /* PSTagTableCell.swift */,
+				575C86951DAE82CA00AD8DB1 /* PSTagTableCell.xib */,
+			);
+			path = PSTagViewSource;
+			sourceTree = "<group>";
+		};
 		5794073B1DA7D81800D238A9 = {
 			isa = PBXGroup;
 			children = (
@@ -109,10 +118,9 @@
 		579407461DA7D81800D238A9 /* PSTagView */ = {
 			isa = PBXGroup;
 			children = (
+				575C86931DAE82CA00AD8DB1 /* PSTagViewSource */,
 				579407471DA7D81800D238A9 /* AppDelegate.swift */,
 				579407491DA7D81800D238A9 /* ViewController.swift */,
-				575C862F1DAE701A00AD8DB1 /* PSTagTableCell.swift */,
-				574D0EAD1DA8F04D0049CB28 /* PSTagTableCell.xib */,
 				5794074B1DA7D81800D238A9 /* Main.storyboard */,
 				5794074E1DA7D81800D238A9 /* Assets.xcassets */,
 				579407531DA7D81800D238A9 /* Info.plist */,
@@ -214,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				575C86991DAE82CA00AD8DB1 /* PSTagTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,8 +231,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5794075E1DA7E42600D238A9 /* Launch Screen.storyboard in Resources */,
-				574D0EAE1DA8F04D0049CB28 /* PSTagTableCell.xib in Resources */,
 				5794074F1DA7D81800D238A9 /* Assets.xcassets in Resources */,
+				575C86981DAE82CA00AD8DB1 /* PSTagTableCell.xib in Resources */,
 				5794074D1DA7D81800D238A9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,8 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				575C86321DAE70F100AD8DB1 /* PSTagTableCell.xib in Sources */,
-				575C86311DAE701A00AD8DB1 /* PSTagTableCell.swift in Sources */,
+				575C86971DAE82CA00AD8DB1 /* PSTagTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,8 +252,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				575C86961DAE82CA00AD8DB1 /* PSTagTableCell.swift in Sources */,
 				5794074A1DA7D81800D238A9 /* ViewController.swift in Sources */,
-				575C86301DAE701A00AD8DB1 /* PSTagTableCell.swift in Sources */,
 				579407481DA7D81800D238A9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
