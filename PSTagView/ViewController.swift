@@ -30,6 +30,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     psTableView.rowHeight = UITableViewAutomaticDimension
     psTableView.estimatedRowHeight = 50
+//    psTableView.registerClass(PSTagTableCell.self, forCellReuseIdentifier: "PSTagTableCell")
     psTableView.registerNib(UINib(nibName: "PSTagTableCell", bundle: nil), forCellReuseIdentifier: "PSTagTableCell");
     
   }
@@ -61,8 +62,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("PSTagTableCell") as! PSTagTableCell
-    cell.tags = tagsArray[indexPath.row % tagsArray.count]
-    cell.updateViews(tableView.frame.width)
+    cell.tags = tagsArray[indexPath.row % tagsArray.count]    
     return cell
   }
 }

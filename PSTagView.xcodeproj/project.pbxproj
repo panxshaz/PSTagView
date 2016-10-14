@@ -19,6 +19,8 @@
 		5794074D1DA7D81800D238A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5794074B1DA7D81800D238A9 /* Main.storyboard */; };
 		5794074F1DA7D81800D238A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5794074E1DA7D81800D238A9 /* Assets.xcassets */; };
 		5794075E1DA7E42600D238A9 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5794075D1DA7E42600D238A9 /* Launch Screen.storyboard */; };
+		57E525601DB0EBAD005D3E2B /* PSHighlightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E5255F1DB0EBAD005D3E2B /* PSHighlightButton.swift */; };
+		57E525611DB0EBB5005D3E2B /* PSHighlightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E5255F1DB0EBAD005D3E2B /* PSHighlightButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,7 @@
 		5794074E1DA7D81800D238A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		579407531DA7D81800D238A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5794075D1DA7E42600D238A9 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		57E5255F1DB0EBAD005D3E2B /* PSHighlightButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSHighlightButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,7 @@
 		575C86931DAE82CA00AD8DB1 /* PSTagViewSource */ = {
 			isa = PBXGroup;
 			children = (
+				57E5255F1DB0EBAD005D3E2B /* PSHighlightButton.swift */,
 				575C86941DAE82CA00AD8DB1 /* PSTagTableCell.swift */,
 				575C86951DAE82CA00AD8DB1 /* PSTagTableCell.xib */,
 			);
@@ -245,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				575C86971DAE82CA00AD8DB1 /* PSTagTableCell.swift in Sources */,
+				57E525601DB0EBAD005D3E2B /* PSHighlightButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				575C86961DAE82CA00AD8DB1 /* PSTagTableCell.swift in Sources */,
+				57E525611DB0EBB5005D3E2B /* PSHighlightButton.swift in Sources */,
 				5794074A1DA7D81800D238A9 /* ViewController.swift in Sources */,
 				579407481DA7D81800D238A9 /* AppDelegate.swift in Sources */,
 			);
@@ -444,6 +450,7 @@
 				575C862D1DAE6F4000AD8DB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5794073F1DA7D81800D238A9 /* Build configuration list for PBXProject "PSTagView" */ = {
 			isa = XCConfigurationList;

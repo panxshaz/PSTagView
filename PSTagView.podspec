@@ -10,5 +10,5 @@ Pod::Spec.new do |spec|
   spec.platform = :ios, "8.0"
   spec.requires_arc = true
   spec.source = { git: "https://github.com/panxshazm/PSTagView.git", tag: "v#{spec.version}", submodules: true }
-  spec.source_files = 'PSTagView/**/PSTagTableCell.swift', 'PSTagView/**/PSTagTableCell.xib'
+  spec.source_files = 'PSTagView/**/*.swift', 'PSTagView/**/*.xib'
 end
