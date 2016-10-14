@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol PSTagDelegate {
+public protocol PSTagDelegate {
   func psIsTagIsHighlighted(tagIndex: Int, tagView: PSTagView) -> Bool
   func psTagTapped(tagIndex: Int, tagView: PSTagView)
 }
@@ -17,7 +17,7 @@ protocol PSTagDelegate {
 //******************************* PSTagView **************************************//
 //********************************************************************************//
 /// Tag View class. Add height constrain and link it to IBOutlet if using inside tableview cell
-@IBDesignable class PSTagView: UIScrollView {
+@IBDesignable public class PSTagView: UIScrollView {
   
   var psTagDelegate: PSTagDelegate?
   
@@ -37,7 +37,7 @@ protocol PSTagDelegate {
   
   @IBInspectable var tagFont: UIFont?
   
-  override func awakeFromNib() {
+  override public func awakeFromNib() {
     super.awakeFromNib()
     initialSetUp()
   }
@@ -56,12 +56,12 @@ protocol PSTagDelegate {
     }
   }
   
-  override init(frame: CGRect) {
+  override public init(frame: CGRect) {
     super.init(frame: frame)
     initialSetUp()
   }
   
-  required init?(coder aDecoder: NSCoder) {
+  required public init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
   }
   
@@ -79,7 +79,7 @@ protocol PSTagDelegate {
   }
   
   
-  func update(tags: [String], constraintToWidth: CGFloat = -1) {
+  internal func update(tags: [String], constraintToWidth: CGFloat = -1) {
     let rightLimit = (constraintToWidth < 0 ? self.frame.width : constraintToWidth)
     var rect = self.bounds
     rect.size.width = rightLimit
@@ -133,24 +133,42 @@ protocol PSTagDelegate {
   
 }
 
+//MARK:
 //********************************************************************************//
 //******************************* PSTagTableCell *********************************//
 //********************************************************************************//
-@IBDesignable class PSTagTableCell: UITableViewCell {
+@IBDesignable public class PSTagTableCell: UITableViewCell {
   
   /// Assuming it will start from some position x and will expand till the end of the contentView
   @IBOutlet var psTagView: PSTagView!
   
-  override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+  /**
+   Registers Nib for `tableView`
+   
+   - parameter tableView:     For what table should it be registered
+   - parameter forIdentifier: Default is "PSTagTableCell"
+   
+   - returns: UINib Object
+   */
+  public class func registerNib(tableView: UITableView, forIdentifier identifier: String = "PSTagTableCell") -> UINib {
+    /// Register nib
+    let bundle = NSBundle(forClass: self)
+    let nib = UINib(nibName: "PSTagTableCell", bundle: bundle)
+    tableView.registerNib(nib, forCellReuseIdentifier: identifier)
+    
+    return nib
+  }
+  
+  override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     //init psTagView
     var contentViewBounds = self.contentView.bounds
-//    contentViewBounds.origin.x += 8
-//    contentViewBounds.origin.y += 8
-//    contentViewBounds.size.width -= 8 * 2
-//    contentViewBounds.size.height -= 8 * 2
+    contentViewBounds.origin.x += 8
+    contentViewBounds.origin.y += 8
+    //    contentViewBounds.size.width -= 8 * 2
+    //    contentViewBounds.size.height -= 8 * 2
     psTagView = PSTagView(frame: self.contentView.bounds)
-//    psTagView.layer.borderWidth = 2
+    //    psTagView.layer.borderWidth = 2
     self.contentView.addSubview(psTagView)
     let topConstraint = NSLayoutConstraint(item: psTagView, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.contentView, attribute: NSLayoutAttribute.TopMargin, multiplier: 1, constant: 0)
     let bottomConstraint = NSLayoutConstraint(item: psTagView, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.contentView, attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: 0)
@@ -160,18 +178,18 @@ protocol PSTagDelegate {
     self.contentView.addConstraints([topConstraint, bottomConstraint, startConstraint, endConstraint])
   }
   
-  required init?(coder aDecoder: NSCoder) {
+  required public init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
   }
   
-  var tags = [String]() {
+  public var tags = [String]() {
     didSet {
       psTagView?.update(tags)
     }
   }
   
   
-  @IBInspectable var selectable: Bool = true {
+  @IBInspectable public var selectable: Bool = true {
     didSet {
       if psTagView == nil {
         return
@@ -183,7 +201,7 @@ protocol PSTagDelegate {
     }
   }
   
-  override func systemLayoutSizeFittingSize(targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
+  override public func systemLayoutSizeFittingSize(targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
     var size = super.systemLayoutSizeFittingSize(targetSize, withHorizontalFittingPriority: UILayoutPriorityFittingSizeLevel, verticalFittingPriority: UILayoutPriorityFittingSizeLevel)
     psTagView?.update(tags, constraintToWidth: self.contentView.bounds.width - psTagView.frame.origin.x)
     size.height = psTagView.psTagViewHeight!.constant + (psTagView.frame.origin.y * 2)

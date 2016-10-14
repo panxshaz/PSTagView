@@ -9,12 +9,12 @@
 import UIKit
 
 
-typealias PSButtonStateConfig = (background: UIColor, textColor: UIColor?)
+public typealias PSButtonStateConfig = (background: UIColor, textColor: UIColor?)
 
 //********************************************************************************//
 //******************************* PSHighlightButton ******************************//
 //********************************************************************************//
-@IBDesignable class PSHighlightButton: UIButton {
+@IBDesignable public class PSHighlightButton: UIButton {
   
   private var normalBGColor = UIColor.whiteColor() {
     didSet {
@@ -70,7 +70,7 @@ typealias PSButtonStateConfig = (background: UIColor, textColor: UIColor?)
   }
   
   
-  override var highlighted: Bool {
+  override public var highlighted: Bool {
     didSet {
       if selected {
         self.backgroundColor = selectedBGColor
@@ -80,7 +80,7 @@ typealias PSButtonStateConfig = (background: UIColor, textColor: UIColor?)
     }
   }
   
-  override var selected: Bool {
+  override public var selected: Bool {
     didSet {
       self.backgroundColor = selected ? selectedBGColor : normalBGColor
     }
@@ -93,10 +93,10 @@ typealias PSButtonStateConfig = (background: UIColor, textColor: UIColor?)
     self.init(frame: frame, title: title, normalState: normalState, highlightedState: highlightedState, selectedState: highlightedState)
   }
   
-  init(frame: CGRect, title: String,
-       normalState: PSButtonStateConfig,
-       highlightedState: PSButtonStateConfig,
-       selectedState: PSButtonStateConfig) {
+  public init(frame: CGRect, title: String,
+              normalState: PSButtonStateConfig,
+              highlightedState: PSButtonStateConfig,
+              selectedState: PSButtonStateConfig) {
     
     super.init(frame: frame)
     let button = self
@@ -106,20 +106,22 @@ typealias PSButtonStateConfig = (background: UIColor, textColor: UIColor?)
     button.setTitle(title, forState: .Normal)
   }
   
-  required init?(coder aDecoder: NSCoder) {
+  required public init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
 }
 
+
+//MARK:
 //********************************************************************************//
 //******************************* PSTagButton ************************************//
 //********************************************************************************//
-typealias LayerProperties = (width: CGFloat, color: UIColor, corner: CGFloat)
+public typealias LayerProperties = (width: CGFloat, color: UIColor, corner: CGFloat)
 
 /// Action block; Return true to cancel the tag state switch; By Default it will toggle b/w highlighted and normal state
-typealias PSTagActionBlock = (sender: UIButton) -> Bool
+public typealias PSTagActionBlock = (sender: UIButton) -> Bool
 
-@IBDesignable class PSTagButton: PSHighlightButton {
+@IBDesignable public class PSTagButton: PSHighlightButton {
   
   var tappable: Bool {
     get {
@@ -146,7 +148,7 @@ typealias PSTagActionBlock = (sender: UIButton) -> Bool
   
   private var addedSelfAsTarget = false
   
-  override func addTarget(target: AnyObject?, action: Selector, forControlEvents controlEvents: UIControlEvents) {
+  override public func addTarget(target: AnyObject?, action: Selector, forControlEvents controlEvents: UIControlEvents) {
     //don't add any external target
     guard let validTarget = target as? PSTagButton
       else {
@@ -188,7 +190,7 @@ typealias PSTagActionBlock = (sender: UIButton) -> Bool
     }
   }
   
-
+  
   
   /**
    Creates a new instance
@@ -202,7 +204,7 @@ typealias PSTagActionBlock = (sender: UIButton) -> Bool
    
    - returns: New Instance of the button
    */
-  class func newInstance(title: String,
+  public class func newInstance(title: String,
                          font: UIFont? = nil,
                          tagNormalState: PSButtonStateConfig = (background: UIColor.whiteColor(), textColor: UIColor.blackColor()),
                          tagSelectedState: PSButtonStateConfig = (background: UIColor ( red: 0.0, green: 0.4784, blue: 1.0, alpha: 1.0 ), textColor: UIColor.whiteColor()),
