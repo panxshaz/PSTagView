@@ -19,13 +19,16 @@ public protocol PSTagDelegate {
 /// Tag View class. Add height constrain and link it to IBOutlet if using inside tableview cell
 @IBDesignable public class PSTagView: UIScrollView {
   
-  var psTagDelegate: PSTagDelegate?
+  public var psTagDelegate: PSTagDelegate?
   
-  /// Gap between tags
-  var gap: (horizontal: CGFloat, vertical: CGFloat) = (8.0, 8.0)
+  /// Gap between tags. Default (8, 8)
+  public var gap: (horizontal: CGFloat, vertical: CGFloat) = (8.0, 8.0)
+  
+  /// Default 10
+  public var cornerRadius: CGFloat = 10
   
   
-  @IBOutlet var psTagViewHeight: NSLayoutConstraint!
+  public var psTagViewHeight: NSLayoutConstraint!
   
   /// Whether the TagView should expand according to content. It works in coordination with psTagViewHeight
   /// Default true
@@ -70,6 +73,7 @@ public protocol PSTagDelegate {
   
   private func createNewButton(title: String) -> PSTagButton {
     let tagButton = PSTagButton.newInstance(title, font: tagFont)
+    tagButton.layer.cornerRadius = cornerRadius
     //scroll view user interaction are offs
     tagButton.tagActionBlock = { (sender: UIButton) -> Bool in
       self.psTagDelegate?.psTagTapped(sender.tag - self.tagOffset, tagView: self)
@@ -79,7 +83,7 @@ public protocol PSTagDelegate {
   }
   
   
-  internal func update(tags: [String], constraintToWidth: CGFloat = -1) {
+  public func update(tags: [String], constraintToWidth: CGFloat = -1) {
     let rightLimit = (constraintToWidth < 0 ? self.frame.width : constraintToWidth)
     var rect = self.bounds
     rect.size.width = rightLimit
@@ -140,7 +144,7 @@ public protocol PSTagDelegate {
 @IBDesignable public class PSTagTableCell: UITableViewCell {
   
   /// Assuming it will start from some position x and will expand till the end of the contentView
-  @IBOutlet var psTagView: PSTagView!
+  @IBOutlet public var psTagView: PSTagView!
   
   /**
    Registers Nib for `tableView`
@@ -201,6 +205,12 @@ public protocol PSTagDelegate {
     }
   }
   
+  // THIS IS THE MOST IMPORTANT METHOD
+  //
+  // This method tells the auto layout
+  // You cannot calculate the collectionView content size in any other place,
+  // because you run into race condition issues.
+  // NOTE: Works for iOS 8 or later
   override public func systemLayoutSizeFittingSize(targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
     var size = super.systemLayoutSizeFittingSize(targetSize, withHorizontalFittingPriority: UILayoutPriorityFittingSizeLevel, verticalFittingPriority: UILayoutPriorityFittingSizeLevel)
     psTagView?.update(tags, constraintToWidth: self.contentView.bounds.width - psTagView.frame.origin.x)
